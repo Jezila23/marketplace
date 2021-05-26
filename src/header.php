@@ -44,13 +44,13 @@
 	        margin-right: 10px;
         }
 	</style>
-    
+
 </head>
 <body>
 
 	<header>
 		<div class="header-logo">
-			<img src="logo.png" alt="logo"> 
+			<a href="#"><img src="logo.png" alt="logo"></a>
 		</div>
 
 		<div class="header-boutons">
