@@ -43,24 +43,29 @@
 
 </head>
 <body>
-
-	<header>
-		<div class="header-logo">
-			<img src="logo.png" alt="logo"> 
+	<footer>
+		<div class="footer-left">
+			<p>
+				<b>Nous contacter :</b><br>
+				img1 <a href="tel:01 44 39 06 00">01 44 39 06 00</a><br>
+				img2 <a href="mailto:ece.marketplace@ece.fr">ece.marketplace@ece.fr</a><br>
+				img3 37 Quai de Grenelle, 75015 Paris
+			</p>
+		</div>
+		
+		<div class="footer-middle">
+			Copyright 2021 | Droit d’auteur ece.marketplace@ece.fr
 		</div>
 
-		<div class="header-boutons">
-			<a href="#" class="monBouton">Accueil</a>
-			<a href="#" class="monBouton">Tout parcourir</a>
-			<a href="#" class="monBouton">Notifications</a>
+		<div class="footer-right">
+			<p>
+				<a href="#">Qui sommes-nous ?</a><br><br>
+				<a href="#">facebook</a>
+				<a href="#">insta</a>
+				<a href="#">twitwi</a>
+			</p>
 		</div>
-
-		<div class="header-right">
-			<a href="#"><img src="profil.png" alt="profil"></a>
-			<a href="#"><img src="panier.png" alt="panier"></a>
-			<a href="#"><img src="deconnexion.png" alt="deconnexion"></a>
-		</div>
-	</header>
+	</footer>
 
 </body>
 </html>
