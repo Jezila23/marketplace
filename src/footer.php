@@ -4,47 +4,43 @@
 	<title></title>
 	<meta charset="utf-8">
 	<style type="text/css">
-		header{
-            padding-top: 0px;
-	        height: 120px;
+		footer{
+	        height: 130px;
 	        background-color: #83C5BE;
-        }
-        
-        .header-logo{
-    	    padding-top: 15px;
-        	float: left;
-	        cursor:pointer;
-        }
-
-        .header-boutons{
-    	    margin-left: 10px;
-	        padding-top: 65px;
-	        float: left;
-        }
-
-        .monBouton{
-    	    text-decoration: none;
-	        background-color: #F28F3B;
 	        color:white;
-    	    border-radius: 30px;
-	        padding: 15px 40px;
-	        margin: 0px 20px;
+	        width: 100%;
+            bottom: 0;
         }
 
-        .monBouton:hover{
-	        background-color: #C8553D;
+        .footer-left{
+	        float: left;
+	        width: 300px;
+	        padding-left: 20px;
+	        font-family: sans-serif;
+	        line-height: 1.5 ;
         }
 
-        .header-right{
-	        padding-top: 75px;
+        .footer-middle{
+	        float: left;
+	        padding-top: 110px;
+	        margin-left:200px;
+	        color: white;
+        }
+
+        .footer-right{
+	        width:170px;
 	        float: right;
+	        padding-top: 20px;
+	        font-family: sans-serif;
+	        line-height: 1.5 ;
         }
 
-        .header-right a{
-	        margin-right: 10px;
+        .footer-right a{
+	        text-decoration: none;
+	        color: white;
         }
 	</style>
-    
+
 </head>
 <body>
 
