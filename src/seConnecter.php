@@ -41,11 +41,11 @@
 	<img src="home.png" alt="home">
 	<div class="conteneur">
 		<img src="profil.png" alt="profil" width="100px" height="100px"><br><br><br>
-		<form>
+		<form action="connectionacheteur.php" method="post">
 			<input type="text" name="NomUtilisateur" placeholder="adresse mail"><br>
 			<input type="password" name="mdp" placeholder="mot de passe"><br><br>
+			<br><br><input type="submit" name="connexion" class="monBouton" style="padding: 15px 60px;" value="Connexion">
 		</form>
-		<a href="#" class="monBouton" style="padding: 15px 60px;">Connexion</a><br>
 	</div>
 
 </body>
