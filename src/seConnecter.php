@@ -38,7 +38,10 @@
 </head>
 
 <body>
-	<img src="home.png" alt="home">
+<a href="#"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+    </svg>
+    </a>
 	<div class="conteneur">
 		<img src="profil.png" alt="profil" width="100px" height="100px"><br><br><br>
 		<form action="connectionacheteur.php" method="post">
