@@ -47,6 +47,7 @@
 		.header-right .connect{
 			color: #F28F3B;
 			line-height: 0.3;
+			front-size : xx-small;
 		}
 	</style>
 
