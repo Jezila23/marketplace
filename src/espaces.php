@@ -40,10 +40,10 @@
 	<img src="home.png" alt="home">
 	<div class="conteneur">
 		<img src="profil.png" alt="profil" width="100px" height="100px"><br>
-		<a href="#" class="monBouton" style="padding: 15px 40px;">Espace Administrateur</a><br>
-		<a href="#" class="monBouton" style="padding: 15px 60px;">Espace Acheteur</a><br>
-		<a href="#" class="monBouton" style="padding: 15px 60px;">Espace Vendeur</a><br>
-		<a href="#" class="monBouton" style="padding: 15px 60px;">Créer un compte</a><br>
+		<a href="seConnecterAd.php" class="monBouton" style="padding: 15px 40px;">Espace Administrateur</a><br>
+		<a href="seConnecter.php" class="monBouton" style="padding: 15px 60px;">Espace Acheteur</a><br>
+		<a href="seConnecterV.php" class="monBouton" style="padding: 15px 60px;">Espace Vendeur</a><br>
+		<a href="inscription.php" class="monBouton" style="padding: 15px 60px;">Créer un compte</a><br>
 	</div>
 
 </body>
