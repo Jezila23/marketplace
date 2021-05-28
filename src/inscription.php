@@ -24,7 +24,7 @@
 		.conteneur{
 			width:400px;
 			min-width:400px;
-			height: 550px;
+			height: 620px;
 			margin:115px auto;
 			background-color:#ffffff;
 			color:#003300;
@@ -44,8 +44,8 @@
 <body>
 	<img src="home.png" alt="home">
 	<div class="conteneur">
-		<img src="profil.png" alt="profil" width="100px" height="100px"><br><br><br>
-		<form>
+		<img src="profil.png" alt="profil" width="100px" height="100px"><br><br>
+		<form action="inscrit.php" method="post">
 			<table>
 				<tr>
 					<td>Nom : </td><td><input type="text" name="nom"></td>
@@ -54,10 +54,22 @@
 					<td>Prénom : </td><td><input type="text" name="prenom"></td>
 				</tr>
 				<tr>
-					<td>Adresse 1 : </td><td><input type="text" name="adress1"></td>
+					<td>Pseudo : </td><td><input type="text" name="pseudo"></td>
 				</tr>
 				<tr>
-					<td>Adresse 2 : </td><td><input type="text" name="adress2"></td>
+					<td>Email : </td><td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td>Mot de passe : </td><td><input type="text" name="mdp"></td>
+				</tr>
+				<tr>
+					<td>Numéro de rue : </td><td><input type="number" name="numr"></td>
+				</tr>
+				<tr>
+					<td>Nom de la rue : </td><td><input type="text" name="nomr"></td>
+				</tr>
+				<tr>
+					<td>Complément d'adresse : </td><td><input type="text" name="adress"></td>
 				</tr>
 				<tr>
 					<td>Ville: </td><td><input type="text" name="ville"></td>
@@ -71,9 +83,14 @@
 				<tr>
 					<td>Téléphone : </td><td><input type="text" name="tel"></td>
 				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<br><input type="submit" name="save" class="monBouton" style="padding: 15px 60px;" value="Enregistrer">
+					</td>
+				</tr>
 			</table>
 		</form>
-		<br><br><a href="#" class="monBouton" style="padding: 15px 60px;">Enregistrer</a><br>
+		
 	</div>
 
 </body>
