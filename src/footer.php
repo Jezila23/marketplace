@@ -9,6 +9,7 @@
 	        background-color: #83C5BE;
 	        color:white;
 	        width: 100%;
+			position:relative;
             bottom: 0;
         }
 
