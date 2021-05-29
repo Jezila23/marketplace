@@ -53,13 +53,18 @@
 
 				echo "Le compte existe déja.";
 			}else{
-				$sql = "INSERT INTO acheteur(Nom, Prenom, Pseudo, Email, Mdp_Ach)
- 					VALUES('$nom', '$prenom', '$pseudo', '$email', '$mdp')";
- 				$sql2 ="INSERT INTO adresse(Num_rue, Nom_rue, Ville, Code_Postale, Pays, Complement_Ad)
+				$sql2 ="INSERT INTO adresse(Num_rue, Nom_rue, Ville, Code_Postale, Pays, Complement_Ad)
  					VALUES('$numr', '$nomr', '$ville', '$codepost', '$pays', '$adress')";
+				$result2 = mysqli_query($db_handle, $sql2);
+
+				$res = mysqli_query($db_handle, "SELECT ID_Adresse FROM adresse ORDER BY ID_Adresse DESC LIMIT 0,1");
+				$final = mysqli_fetch_array($res);
+				$id = $final["ID_Adresse"];
+
+				$sql = "INSERT INTO acheteur(Nom, Prenom, Pseudo, Email, Mdp_Ach, ID_Adresse)
+ 					VALUES('$nom', '$prenom', '$pseudo', '$email', '$mdp', '$id')";
 
 				$result = mysqli_query($db_handle, $sql);
-				$result2 = mysqli_query($db_handle, $sql2);
 
 				echo "Bienvenu sur ECE MarketPlace. Vous faites désormais parti de nos membres." . "<br>";
  
@@ -82,14 +87,25 @@
 					echo "<br>"."<br>";
 				}
 
+				$sql2 = "SELECT * FROM adresse";
+				if ($numr != "") {
+
+					$sql2 .= " WHERE Num_rue LIKE '%$numr%'";
+					if ($nomr != "") {
+						$sql2 .= " AND Nom_rue LIKE '%$nomr%'";
+						if ($ville != "") {
+							$sql2 .= " AND Ville LIKE '%$ville%'";
+						}
+					}
+				}
+
 				$result2 = mysqli_query($db_handle, $sql2);
 				while ($data = mysqli_fetch_assoc($result2)) {
-					echo "Informations que vous avez saisi:" . "<br>";
 					echo "Adresse: " . $data['Num_rue']." ";
 					echo $data['Nom_rue'] . "<br>";
 					echo $data['Complement_Ad']."<br>";
 					echo $data['Code_Postale']." ";
-					echo $data['Ville']."<br>";
+					echo $data['Ville']."<br>"."<br>";
 				}
 			}
 		}else {
