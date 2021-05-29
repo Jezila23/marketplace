@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #EDF6F9;
+    color: #F28F3B;
+}
+
+header {
+    width: 100%;
+    padding-top: 0;
+    height: 120px;
+    background-color: #83C5BE;
+}
+
+.header-logo {
+    padding-top: 15px;
+    float: left;
+    cursor: pointer;
+}
+
+.header-boutons {
+    margin-left: 10px;
+    padding-top: 65px;
+    float: left;
+}
+
+.monBouton {
+    text-decoration: none;
+    background-color: #F28F3B;
+    color: white;
+    border-radius: 30px;
+    padding: 15px 40px;
+    margin: 0px 20px;
+}
+
+.monBouton:hover {
+    background-color: #C8553D;
+}
+
+.header-right {
+    padding-top: 75px;
+    float: right;
+}
+
+.header-right a {
+    margin-right: 10px;
+}
+
+.header-right .connect {
+    color: #F28F3B;
+    line-height: 0.3;
+    font-size: xx-small;
+}
+
+#quiSommesNous {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: none;
+}
+
+.carousel-indicators .active{
+    background-color: #F28F3B;
+}
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 55px;
+    color: #F28F3B;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: #F28F3B;
+}
+
+footer {
+    height: 130px;
+    background-color: #83C5BE;
+    color: white;
+    width: 100%;
+}
+
+.footer-left {
+    float: left;
+    width: 300px;
+    padding-left: 20px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.footer-middle {
+    float: left;
+    padding-top: 110px;
+    margin-left: 200px;
+    color: white;
+}
+
+.footer-right {
+    width: 170px;
+    float: right;
+    padding-top: 20px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: white;
+}

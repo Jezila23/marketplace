@@ -1,59 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<style type="text/css">
-		footer{
-	        height: 130px;
-	        background-color: #83C5BE;
-	        color:white;
-	        width: 100%;
-			position:relative;
-            bottom: 0;
-        }
 
-        .footer-left{
-	        float: left;
-	        width: 300px;
-	        padding-left: 20px;
-	        font-family: sans-serif;
-	        line-height: 1.5 ;
-        }
-
-        .footer-middle{
-	        float: left;
-	        padding-top: 110px;
-	        margin-left:200px;
-	        color: white;
-        }
-
-        .footer-right{
-	        width:170px;
-	        float: right;
-	        padding-top: 20px;
-	        font-family: sans-serif;
-	        line-height: 1.5 ;
-        }
-
-        .footer-right a{
-	        text-decoration: none;
-	        color: white;
-        }
-	</style>
-
-</head>
-<body>
 	<footer>
 		<div class="footer-left">
 			<p>
-				<b>Nous contacter :</b><br>
+				<b>Nous contacter :</b><br/>
 				<svg style="width:24px;height:24px" viewBox="0 0 24 24">
     			<path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-				</svg> <a href="tel:01 44 39 06 00">01 44 39 06 00</a><br>
+				</svg> <a href="tel:+33144390600">01 44 39 06 00</a><br/>
 				<svg style="width:24px;height:24px" viewBox="0 0 24 24">
     			<path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-				</svg> <a href="mailto:ece.marketplace@ece.fr">ece.marketplace@ece.fr</a><br>
+				</svg> <a href="mailto:ece.marketplace@ece.fr">ece.marketplace@ece.fr</a><br/>
 				<svg style="width:24px;height:24px" viewBox="0 0 24 24">
     			<path fill="currentColor" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
 				</svg> 37 Quai de Grenelle, 75015 Paris
@@ -66,7 +21,7 @@
 
 		<div class="footer-right">
 			<p>
-				<a href="quisommesnous.php">Qui sommes-nous ?</a><br><br>
+				<a href="quisommesnous.php">Qui sommes-nous ?</a><br/><br/>
 				<a href="#"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
     			<path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
 				</svg>
@@ -83,5 +38,10 @@
 		</div>
 	</footer>
 
+	<?php 
+		if(isset($boostrap)){
+			echo "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4\" crossorigin=\"anonymous\"></script>";
+		}
+	?>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <?php
-
-include ("header.php");
+$titre = "Paiement";
+require_once ("./include/header.inc.php");
 
 ?>
 <style type="text/css">
 body{
     background-color: #EDF6F9;
-}
+}*/
 </style>
 <body>
     <center>
     <h1>Paiement</h1>
-    <form action="traitement.php" method="post">
+    <form action="./include/traitement.inc.php" method="post">
         <table border="2">
             <tr>
                 <td>Nom du propriétaire :</td>
@@ -52,6 +52,6 @@ body{
 
 <?php
 
-include ("footer.php");
+require_once ("./include/footer.inc.php");
 
 ?>
