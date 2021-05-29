@@ -1,0 +1,56 @@
+html, body {
+    height: 100%;
+    background-color: #EDF6F9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.form-connexion>form {
+    margin: 0;
+    width: 480px;
+    height: 480px;
+    border: 1px solid;
+    border-color: lightgray;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-connexion-image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    border-color: #EDF6F9;
+    background-color: #EDF6F9;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+* Modification du style par défaut de boostrap
+* (cf. https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap/28261348#28261348 )
+*/
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #F28F3B !important;
+}
+
+.btn-primary {
+    border-color: #F28F3B;
+}
