@@ -6,7 +6,7 @@ require_once ("./include/header.inc.php");
 <style type="text/css">
 body{
     background-color: #EDF6F9;
-}*/
+}
 </style>
 <body>
     <center>
@@ -40,12 +40,13 @@ body{
                     <input type="text" name="code">
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" name="paiement" value="payer">
-                </td>
-            </tr>
         </table>
+        <br/>
+        <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" name="paiement" value="PAYER" class="monBouton">
+                </td>
+        </tr>
     </form>
     </center>
 </body>
