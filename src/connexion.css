@@ -51,6 +51,7 @@ header {
     background-color: #F28F3B !important;
 }
 .btn-primary:hover, .btn-primary:active{
+    border-color: #C8553D !important;
     background-color: #C8553D !important;
 }
 .btn-primary {
