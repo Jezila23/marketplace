@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/cart.png">
 	<title>Connexion</title>
 	<meta charset="utf-8">
 	<style type="text/css">
