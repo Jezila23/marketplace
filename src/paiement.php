@@ -11,7 +11,7 @@ body{
 <body>
     <center>
     <h1>Paiement</h1>
-    <form action="./include/traitement.inc.php" method="post">
+    <form action="traitement.php" method="post">
         <table border="2">
             <tr>
                 <td>Nom du propriétaire :</td>
