@@ -10,16 +10,12 @@ html, body {
     box-sizing: inherit;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #EDF6F9;
-    color: #F28F3B;
-}
-
 header {
     background-color: #83C5BE;
+}
+
+body {
+    background-color: #EDF6F9;
 }
 
 .btn-primary, .btn-primary:visited {
@@ -65,4 +61,25 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    color: #F28F3B;
+}
+
+.card {
+    width: 250px;
+    height: 200px;
+    background-color: #FFEEDD;
+}
+
+.card-img-top {
+    width: 250px;
+    height: 110px;
+}
+
+.card-img-top>img {
+    height: 110px;
+}
+
+.card-title>a {
+    color: black;
+    text-decoration: none;
 }

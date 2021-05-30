@@ -64,7 +64,9 @@
             </div>
         </div>
     </footer>
-
+    <?php if (isset($flickity) && $flickity) : ?>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <?php endif ?>
 </body>
 
-</html>
+</html>>
