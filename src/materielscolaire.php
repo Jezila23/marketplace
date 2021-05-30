@@ -78,12 +78,14 @@ require_once("./include/header.inc.php");
 		$requete="SELECT*FROM image_art, articles WHERE image_art.ID_Art=articles.ID_Art  AND articles.Categorie LIKE '%materiel scolaire%'";
 		$resultat=mysqli_query($db_handle, $requete);
 		while($ligne=mysqli_fetch_array($resultat)) {
+            $id = $ligne['ID_Art'];
 			?>
 			<div class="col-6">
-			<a href="materielscolaire.php"><img src="<?php echo $ligne['Img'];?>" class="rounded" alt="Logo HTML w3" width="110" height="110"/>
+			<a href="<?php echo "article.php?id=".$id."\"";?>"><img src="<?php echo $ligne['Img'];?>" class="rounded" alt="Logo HTML w3" width="110" height="110"/>
 			<br/>
-			<span><?php echo $ligne['Nom']; ?></span>
+			<span><?php echo $ligne['Nom'];?></span>
 			</a>
+
 			</div>
 			<?php
 		}
