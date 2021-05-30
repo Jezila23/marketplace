@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #EDF6F9;
+    color: #F28F3B;
+}
+
+header {
+    background-color: #83C5BE;
+}
+
+.btn-primary, .btn-primary:visited {
+    color: white;
+    background-color: #F28F3B !important;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    border-color: #C8553D !important;
+    background-color: #C8553D !important;
+}
+
+.btn-primary {
+    border-color: #F28F3B;
+}
+
+.header-bouton-utilisateur>* {
+    color: white;
+}
+
+.header-bouton-utilisateur>a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #83C5BE;
+    color: white;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: white;
+}
+
+#quiSommesNous {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}

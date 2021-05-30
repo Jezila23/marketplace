@@ -4,8 +4,8 @@ body{
 }
 </style>
 <?php
-
-include ("header.php");
+$titre = "Traitement";
+include('./include/header.inc.php');
 
 // vérifions que le formulaire de paiement n'est pas vide
 
@@ -47,5 +47,5 @@ include ("header.php");
 	}
     }
 
-include("footer.php");
+require_once("./include/footer.inc.php");
 ?>
