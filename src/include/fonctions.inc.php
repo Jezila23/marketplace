@@ -33,12 +33,9 @@ EOT;
     echo $html;
 }
 
-//Paramêtres URL => Une seule page article.php, mais son contenu est généré en fonction de l'article article.php?id=1
-
-
 /**
  * Fonction utilitaire : afficher une cellule du carousel
- *
+ * Les cellules on un lien vers la page article.php, l'id de l'article est passé en paramêtre URL
  * @param integer $id de l'article
  * @param string $img
  * @param string $titre
@@ -49,9 +46,9 @@ function cell_carousel(int $id, string $img = "https://source.unsplash.com/rando
 {
     $cell = <<< EOT
 <div class="carousel-cell">
-    <div class="card mx-3 rounded-3">
+    <div class="card card-produit mx-3 rounded-3">
         <figure class=" mt-3 card-img-top d-flex align-items-center justify-content-center">
-            <img class="border border-light rounded-3" src="$img" alt="Article">
+            <img class="border border-light rounded-3" src="$img" alt="Article"/>
         </figure>
         <div class="card-body p-0">
             <p class="card-title text-center mb-1"><a href="article.php?id=$id">$titre</a></p>
