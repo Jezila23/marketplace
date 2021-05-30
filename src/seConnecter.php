@@ -1,3 +1,10 @@
+<?php
+//Redirection vers la page 'espaces.php' si le role de l'utilisateur n'est pas valide
+if (!is_valid_role()) {
+	header('Location:./espaces.php');
+	exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -41,7 +48,7 @@
 	-->
 	<main class="form-connexion container justify-content-center">
 		<!-- class="mx-auto" | classe boostrap (marge automatique pour centrer horizontalement le contenu, cf. https://getbootstrap.com/docs/5.0/utilities/spacing/#horizontal-centering )-->
-		<form class="mx-auto" action="./include/connexionacheteur.inc.php" method="post">
+		<form class="mx-auto" action="<?php echo "./connexion" .  $_GET["role"] . ".php"; ?>" method="post">
 			<!-- class="mb-4" | classe boostrap (marge bottom 4)
 				 class="form-connexion-image" | classe personnalisée pour gérer l'image (bordure aroundie, background, taille)
 			-->
@@ -58,7 +65,7 @@
 					 class="border border-2" | classes boostrap pour la bordure 
 				-->
 				<div class="col-8">
-					<input class="form-control border border-2 " type="text" name="NomUtilisateur" placeholder="Adresse mail" />
+					<input class="form-control border border-2 " type="text" name="email" placeholder="Adresse mail" />
 				</div>
 			</div>
 			<div class="row justify-content-center mb-4">
@@ -75,3 +82,16 @@
 </body>
 
 </html>
+
+<?php
+/**
+ * Fonction utilitaire : vérifie si le rôle de l'utilisateur est valide
+ *
+ * @return boolean
+ */
+function is_valid_role(): bool
+{
+	$role = isset($_GET["role"]) ? $_GET["role"] : "";
+	return !strcmp($role, "acheteur") || !strcmp($role, "vendeur") || !strcmp($role, "administrateur");
+}
+?>
