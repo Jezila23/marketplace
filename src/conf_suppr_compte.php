@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Suppression reussie</title>
-	<meta http-equiv="refresh" content="3; accueil.php">
+	<meta http-equiv="refresh" content="3; index.php">
 	<style type="text/css">
 		p{
 			font-size: 2em;
