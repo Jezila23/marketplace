@@ -12,7 +12,7 @@ $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
 
 if (isset($_POST["supprimer"])) {
     if ($db_found) {
-        $sql = "SELECT * FROM articles";
+        $sql = "SELECT * FROM vendeur";
         if ($nom != "") {
             $sql .= " WHERE Pseudo LIKE '%$pseudo%'";
         }
@@ -25,7 +25,7 @@ if (isset($_POST["supprimer"])) {
             $sql ="DELETE FROM vendeur WHERE Pseudo LIKE '%$pseudo%";
             $result = mysqli_query($db_handle, $sql);
 
-            echo "Vous avez supprimé l'article." . "<br>";
+            echo "Vous avez supprimé le vendeur" . "<br>";
 
         }
     }else {
