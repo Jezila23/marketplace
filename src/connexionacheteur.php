@@ -7,8 +7,8 @@ $mdp = isset($_POST["mdp"]) ? $_POST["mdp"] : "";
 
 if ($email && $mdp) {
     $sql = "SELECT * FROM acheteur";
-    $sql .= " WHERE Email LIKE '%$email%'";
-    $sql .= " AND Mdp_Ach LIKE '%$mdp%'";
+    $sql .= " WHERE Email LIKE '$email'";
+    $sql .= " AND Mdp_Ach LIKE '$mdp'";
     //La requête est effectuée à l'aide d'une fonction utilitaire
     $res = query_bdd($sql);
     //On s'attend à ce que la requête renvoie au maximun 1 ligne
