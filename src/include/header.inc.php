@@ -24,7 +24,7 @@
         <div class="container-fluid p-0">
             <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <div class="header-logo">
-                    <a href="#"><img src="images/logo.png" alt="logo" /></a>
+                    <a href="./index.php"><img src="images/logo.png" alt="logo" /></a>
                 </div>
 
                 <ul class="nav">
