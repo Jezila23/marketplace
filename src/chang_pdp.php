@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>changement pdp</title>
+    <meta http-equiv="refresh" content="30; index.php">
 </head>
 <body>
 	<?php
@@ -9,7 +10,7 @@
 		$pseudo = isset($_GET["pseudo"])? $_GET["pseudo"] : "";
 	?>
 	<form method="post">
-		Entrez l'url de votre nouvelle photo de profil
+		Entrez l'url de votre nouvelle photo de profil<br>Cette page se fermera automatiquement dans 30 secondes
 		<input type="text" name="pdp"><input type="submit" name="Choisir">
 	</form>
 

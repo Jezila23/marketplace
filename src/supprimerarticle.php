@@ -64,7 +64,7 @@
 		</svg>
 	</a>
 	<div class="conteneur">
-		<form action="./include/delArticle.inc.php" method="post">
+		<form action="delArticle.php" method="post">
         <h3>Supprimer un article</h3>
         <table>
 				<tr>
