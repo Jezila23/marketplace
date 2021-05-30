@@ -74,7 +74,7 @@ require_once("./include/header.inc.php");
  	<div id="section">
  		<div id="col">
  		<?php
-		$requete="SELECT*FROM image_art, articles WHERE image_art.ID_Art=articles.ID_Art  AND articles.Type LIKE '%transaction client-vendeur%'";
+		$requete="SELECT*FROM image_art, articles WHERE image_art.ID_Art=articles.ID_Art  AND articles.Type LIKE '%negocier%'";
 		$resultat=mysqli_query($db_handle, $requete);
 		while($ligne=mysqli_fetch_array($resultat)) {
 			?>
