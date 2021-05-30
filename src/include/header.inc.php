@@ -29,7 +29,7 @@
 
                 <ul class="nav">
                     <li class="nav-item mx-3"><a href="./index.php" class="nav-link btn btn-primary rounded-pill">Accueil</a></li>
-                    <li class="nav-item mx-3"><a href="#" class="nav-link btn btn-primary rounded-pill">Tout Parcourir</a></li>
+                    <li class="nav-item mx-3"><a href="./toutParcourir.php" class="nav-link btn btn-primary rounded-pill">Tout Parcourir</a></li>
                     <?php if (isset($_SESSION["acheteur"])) : ?>
                         <li class="nav-item mx-3"><a href="#" class="nav-link btn btn-primary rounded-pill">Notifications</a></li>
                     <?php endif ?>

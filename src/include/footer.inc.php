@@ -1,4 +1,4 @@
-<footer class="fixed-bottom d-flex flex-wrap align-items-end justify-content-center justify-content-lg-between">
+<footer class="container-flow w-100 d-flex flex-wrap align-items-end justify-content-center justify-content-lg-between">
         <div class="ms-3 col-auto footer-left">
             <div class="row">
                 <p class="col fs-5">Nous contacter :</p>
@@ -66,6 +66,12 @@
     </footer>
     <?php if (isset($flickity) && $flickity) : ?>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <?php endif ?>
+
+
+    <?php if(isset($bootstrap) && $bootstrap) : ?>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="form-validation.js"></script>
     <?php endif ?>
 </body>
 
