@@ -56,10 +56,10 @@
 			add
 		</div>
 		<br><br>
-		<form>
+		<form action="ajouterarticle.php" method="post">
 			<table>
 				<tr>
-					<td>Nom : </td><td><input type="text" name="NomUtilisateur"></td>
+					<td>Nom : </td><td><input type="text" name="nom"></td>
 				</tr>
 				<tr>
 					<td>Prix: </td><td><input type="text" name="prix"></td>
@@ -67,7 +67,7 @@
 				<tr>
 					<td>Catégorie : </td>
 					<td>
-						<select name="catégorie">
+						<select name="categorie">
 							<option value=""> </option>
 							<option value="art">Meubles et objets d'art</option>
 							<option value="vip">Objets VIP</option>
@@ -77,12 +77,12 @@
 				</tr>
 				<tr>
 					<td><label class="labelCol">Description :</label></td>
-					<td><textarea name="Description"></textarea></td>
+					<td><textarea name="description"></textarea></td>
 				</tr>
 				<tr>
 					<td>Modèle de vente : </td>
 					<td>
-						<select name="catégorie">
+						<select name="mode">
 							<option value=""> </option>
 							<option value="enchere">Meilleure offre</option>
 							<option value="negoc">Transaction client-vendeur</option>
@@ -90,9 +90,12 @@
 						</select>
 					</td>
 				</tr>
+				<tr>
+				<td>Quantité : </td><td><input type="number" name="quantite"></td>
+				</tr>
+				<br><br><input type="submit" name="ajouter" class="monBouton" style="padding: 15px 40px;" value="Ajouter l'article">
 			</table>
 		</form>
-		<br><br><a href="#" class="monBouton" style="padding: 15px 40px;">Ajouter l'article</a><br>
 	</div>
 
 </body>
