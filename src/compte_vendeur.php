@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Compte client</title>
+	<title>Compte vendeur</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -59,7 +59,7 @@
 	text-align: center;
 }
 .ligne{
-	height: 300px;
+	
 	border: solid 1px black;
 	margin-bottom: 10px;
 	display: none;
@@ -90,6 +90,7 @@ p{
 	float:right;
 	cursor: pointer;
 }
+
 #gauche{
 	float: left;
 }
@@ -103,17 +104,12 @@ h3{
 	cursor: pointer;
 }
 
+#col{
+		column-count: 3;
+	}
 
-#carouselExampleIndicators{
-	width: 50%;
-	margin: 0 auto;
-	margin-top: 5px;
-}
-.carousel-item img{
-	width: 100%;
-	height: 100%;
-}
 	</style>
+
 
 	
 </head>
@@ -121,18 +117,18 @@ h3{
 <?php 
 	$pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
  
-	$database = "merketplace";
+	$database = "ecemarketplace";
 	//connectez-vous dans BDD
 	$db_handle = mysqli_connect('localhost','root','');
 	$db_found = mysqli_select_db($db_handle, $database);
-	$sql = "SELECT ID_Vend, Email FROM vendeur WHERE Pseudo = '$pseudo'";
+	$sql = "SELECT ID_Vend, Email, Img_Vendeur FROM vendeur WHERE Pseudo = '$pseudo'";
 	$result = mysqli_query($db_handle, $sql);
 	if (mysqli_num_rows($result)==0){
-		echo "Pas le bon blaz";
 	} else{
 		while ($data = mysqli_fetch_assoc($result)){
 			$ID = $data['ID_Vend'];
 			$mail = $data['Email'];
+			$url_pdp = $data['Img_Vendeur'];
 		}
 	}
 	mysqli_close($db_handle);
@@ -146,55 +142,90 @@ h3{
 			<div id="gauche">
 				<h2>Votre compte</h2>
 				<p>
-					<u>Vendeur</u><br>
-					<?php echo "ID : ".$ID."<br>Pseudo : ".$pseudo."<br> Mail : <a href=\"mailto:ece.marketplace@gmail.com\">".$mail."</a><br> Telephone : <a href=\"tel:0651804042\">"."téléphone</a>"?>
+					<u>Vendeur</u><br><br>
+					<?php echo "ID : ".$ID."<br>Pseudo : ".$pseudo."<br> Mail : <a href=\"mailto:ece.marketplace@gmail.com\">".$mail."</a>"?>
 				</p>
 			</div>
-			<img src="user.svg" alt="pdp" onclick="modif_pdp()">
+			<img src="<?php echo "$url_pdp" ?>" alt="pdp" onclick="modif_pdp()">
 		</div>
 
 		<h3 id="btn_vente">Articles mis en vente</h3>
 		<div class="ligne vente">
-<!-- Ici commence le carrousel-->
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	 		<div id="section">
+ 				<div id="col">
+	 				<?php
+ 						define('DB_SERVER','localhost');
+						define('DB_USER','root');
+						define('DB_PASS','');
+						$database = "ecemarketplace";
+						$db_handle=mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
+						$db_found=mysqli_select_db($db_handle, $database);
+						$sql = "SELECT Img FROM image_art WHERE ID_Art IN (SELECT ID_Art FROM articles WHERE ID_Vend = '$ID' and Type='immediat') ";
+						$result = mysqli_query($db_handle, $sql);
+						while ($data = mysqli_fetch_assoc($result)){
+							$image = $data['Img'];
+							$sql2 = "SELECT ID_Art FROM image_art WHERE Img = '$image' ";
+							$result2 = mysqli_query($db_handle, $sql2);
+							$ID_Art = mysqli_fetch_assoc($result2)['ID_Art'];
+					?>
+					<div class="col-6">
+
+						<a href="article.php?id_art=<?php echo"$ID_Art"?>">
+							<img src="<?php echo $data['Img'];?>" class="rounded" alt="photo" width="200" height="200"/>					
+						</a>
+					</div>
+					<?php } ?>
 				</div>
-
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="java.jpg" class="d-block w-100" alt="apprendre java">
-					</div>
-					<div class="carousel-item">
-						<img src="coque.jfif" class="d-block w-100" alt="coque">
-					</div>
-					<div class="carousel-item">
-						<img src="java.jpg" class="d-block w-100" alt="capture">
-					</div>
-				</div>
-
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-				</button>
-
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-				</button>
-			</div> 
-<!-- Ici termine le carrousel-->
+		 	</div>
 		</div>
 		<h3 id="btn_nego">Négociations en cours</h3>
-		<div class="ligne nego"></div>
+		<div class="ligne nego">
+	 		<div id="section">
+ 				<div id="col">
+	 				<?php
+						$sql = "SELECT Img FROM image_art WHERE ID_Art IN (SELECT ID_Art FROM articles WHERE ID_Vend = '$ID' and Type='negocier') ";
+						$result = mysqli_query($db_handle, $sql);
+						while ($data = mysqli_fetch_assoc($result)){
+							$image = $data['Img'];
+							$sql2 = "SELECT ID_Art FROM image_art WHERE Img = '$image' ";
+							$result2 = mysqli_query($db_handle, $sql2);
+							$ID_Art = mysqli_fetch_assoc($result2)['ID_Art'];
+					?>
+					<div class="col-6">
+						<a href="article.php?id_art=<?php echo"$ID_Art"?>">
+							<img src="<?php echo $data['Img'];?>" class="rounded" alt="photo" width="200" height="200"/>					
+						</a>
+					</div>
+					<?php } ?>
+				</div>
+		 	</div>
+		</div>
 		<h3 id="btn_ench">Enchères en cours</h3>
-		<div class="ligne ench"></div>
-		<h3 id="btn_vendu">Articles vendus</h3>
-		<div class="ligne vendu"></div>
+		<div class="ligne ench">
+	 		<div id="section">
+ 				<div id="col">
+	 				<?php
+						$sql = "SELECT Img FROM image_art WHERE ID_Art IN (SELECT ID_Art FROM articles WHERE ID_Vend = '$ID' and Type='enchere') ";
+						$result = mysqli_query($db_handle, $sql);
+						while ($data = mysqli_fetch_assoc($result)){
+							$image = $data['Img'];
+							$sql2 = "SELECT ID_Art FROM image_art WHERE Img = '$image' ";
+							$result2 = mysqli_query($db_handle, $sql2);
+							$ID_Art = mysqli_fetch_assoc($result2)['ID_Art'];
+					?>
+					<div class="col-6">
+						<a href="article.php?id_art=<?php echo"$ID_Art"?>">
+							<img src="<?php echo $data['Img'];?>" class="rounded" alt="photo" width="200" height="200"/>					
+						</a>
+					</div>
+					<?php } ?>
+				</div>
+		 	</div>
+		</div>
 
-		<p id="suppr" onclick="verif_suppr()" style="color:red;cursor:pointer;padding-left: 660px;font-size: 0.8em;"><u>Supprimer le compte</u></p>
+
+		<p onclick="ajouter_article()" style="color:#888;cursor:pointer;margin-left: 660px;font-size: 0.8em;"><u>Ajouter un article</u></p>
+		<p onclick="verif_suppr()" style="color:red;cursor:pointer;margin-left: 660px;font-size: 0.8em;"><u>Supprimer le compte</u></p>
 	</div>
 
 	<footer></footer>
@@ -203,15 +234,21 @@ h3{
 		function verif_suppr() {
 			var r = confirm("Etes-vous sur.e de vouloir supprimer votre compte ? Cette action est définitive");
 			if (r == true) {
-				
-				window.open("message.php", "_self");
+				window.open("conf_suppr_compte.php?pseudo=<?php echo"$pseudo"?>", "_self");
 			}else{}
 		}
 
 		function modif_pdp() {
 			var i = confirm("Voulez-vous modifier votre photo de profil ?");
 			if (i == true) {
-				window.open("pdp.php", "_self");
+				window.open("change_pdp.php?pseudo=<?php echo"$pseudo"?>", "_self");
+			}else{}
+		}
+
+		function ajouter_article() {
+			var i = confirm("Voulez-vous ajouter un article ?");
+			if (i == true) {
+
 			}else{}
 		}
 
