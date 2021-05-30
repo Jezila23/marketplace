@@ -1,5 +1,6 @@
 <?php
 $titre = "Mon Panier";
+$bootstrap = true;
 require_once("./include/header.inc.php");
 ?>
 
