@@ -9,7 +9,7 @@ require_once('./include/header.inc.php');
 	<p>Alors n’attendez-pas, passez commande !</p>
 	<h2 class="mb-3">NOS ENGAGEMENTS :</h2>
 	<p>Nous faisons tout notre possible pour vous accompagner lors de vos achats et faciliter vos échanges avec nos fournisseurs. <br />
-		En cas de doutes ou de questionnements, vous pouvez nous joindre par téléphone au 01 44 39 06 00 ou par <a href='charlene.corencin@edu.ece.fr'>email</a>.</p>
+		En cas de doutes ou de questionnements, vous pouvez nous joindre par téléphone au 01 44 39 06 00 ou par <a href="mailto:charlene.corencin@edu.ece.fr">email</a>.</p>
 </div>
 
 <?php require_once('./include/footer.inc.php'); ?>

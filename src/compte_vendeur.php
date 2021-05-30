@@ -115,7 +115,7 @@ h3{
 </head>
 <body>
 <?php 
-	$pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
+	$pseudo = isset($_GET["pseudo"])? $_GET["pseudo"] : "";
  
 	$database = "ecemarketplace";
 	//connectez-vous dans BDD
@@ -248,7 +248,7 @@ h3{
 		function ajouter_article() {
 			var i = confirm("Voulez-vous ajouter un article ?");
 			if (i == true) {
-
+				window.open("addArticle.php?pseudo=<?php echo"$pseudo"?>", "_self");
 			}else{}
 		}
 

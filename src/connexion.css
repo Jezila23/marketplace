@@ -47,13 +47,16 @@ header {
 * (cf. https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap/28261348#28261348 )
 */
 
-.btn-primary, .btn-primary:visited{
+.btn-primary, .btn-primary:visited {
+    color: white;
     background-color: #F28F3B !important;
 }
-.btn-primary:hover, .btn-primary:active{
+
+.btn-primary:hover, .btn-primary:active {
     border-color: #C8553D !important;
     background-color: #C8553D !important;
 }
+
 .btn-primary {
     border-color: #F28F3B;
 }

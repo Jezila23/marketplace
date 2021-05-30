@@ -43,11 +43,11 @@
 function url_profil(): void
 {
     if(isset($_SESSION["acheteur"])){
-        echo "./profilacheteur.php";
+        echo "./enconstruction.html";
     }elseif (isset($_SESSION["vendeur"])) {
-        echo "./profilvendeur.php";
+        echo "./compte_vendeur.php?pseudo=" . $_SESSION["vendeur"]["Pseudo"];
     }elseif (isset($_SESSION["administrateur"])) {
-        echo "./profiladministrateur.php";
+        echo "./compte_admin.php?id_ad=" . $_SESSION["administrateur"]["ID_Ad"] ;
     }
 }
 ?>

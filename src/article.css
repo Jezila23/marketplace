@@ -1,0 +1,36 @@
+body {
+    background-color: #EDF6F9;
+}
+
+.monBouton {
+    text-decoration: none;
+    background-color: #F28F3B;
+    color: white;
+    width: 300px;
+    border-radius: 30px;
+    margin: 0px 20px;
+}
+
+.monBouton:hover {
+    background-color: #C8553D;
+}
+
+.conteneur {
+    width: 600px;
+    min-width: 400px;
+    height: 480px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    color: #003300;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid;
+}
+
+h3{
+    color : #F28F3B;
+}
+tr {
+    text-align: left;
+    margin: 10px auto;
+}

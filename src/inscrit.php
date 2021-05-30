@@ -1,5 +1,6 @@
 <?php
-	
+	$titre = "Inscription";
+	require_once("./include/header.inc.php");
 	$nom = isset($_POST["nom"])? $_POST["nom"] : "";
 	$prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
 	$pseudo = isset($_POST["nom"])? $_POST["nom"] : "";
@@ -115,3 +116,5 @@
 
 	mysqli_close($db_handle);
 ?>
+
+<?php require_once("./include/footer.inc.php"); ?>
