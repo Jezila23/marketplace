@@ -53,7 +53,7 @@
 
 				echo "Le compte existe déja.";
 			}else{
-				$sql2 ="INSERT INTO adresse(Num_rue, Nom_rue, Ville, Code_Postale, Pays, Complement_Ad)
+				$sql2 ="INSERT INTO adresse(Num_rue, Nom_rue, Ville, Code_Postal, Pays, Complement_Ad)
  					VALUES('$numr', '$nomr', '$ville', '$codepost', '$pays', '$adress')";
 				$result2 = mysqli_query($db_handle, $sql2);
 
@@ -66,7 +66,7 @@
 
 				$result = mysqli_query($db_handle, $sql);
 
-				echo "Bienvenu sur ECE MarketPlace. Vous faites désormais parti de nos membres." . "<br>";
+				echo "Bienvenue sur ECE MarketPlace. Vous faites désormais parti de nos membres." . "<br>";
  
 				$sql = "SELECT * FROM acheteur";
 				if ($nom != "") {
@@ -104,7 +104,7 @@
 					echo "Adresse: " . $data['Num_rue']." ";
 					echo $data['Nom_rue'] . "<br>";
 					echo $data['Complement_Ad']."<br>";
-					echo $data['Code_Postale']." ";
+					echo $data['Code_Postal']." ";
 					echo $data['Ville']."<br>"."<br>";
 				}
 			}
